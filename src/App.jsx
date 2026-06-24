@@ -87,29 +87,6 @@ const App = () => {
         {/* Main Content */}
         <div className="main-content">
           <Navbar toggleMobileMenu={toggleMobileMenu} theme={theme} setTheme={setTheme} />
-            <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-              <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
-                <Menu size={24} />
-              </button>
-              <div className="stats" style={{ display: 'flex', gap: '16px' }}>
-                <div className="stat-item" style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--accent-color)', fontSize: '14px' }}>
-                  <Flame size={18} /> <strong>{state.streak}</strong> Day Streak
-                </div>
-                <div className="stat-item" style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--primary-color)', fontSize: '14px' }}>
-                  <Award size={18} /> <strong>Lvl {state.user.level}</strong> ({state.xp} XP)
-                </div>
-              </div>
-            </div>
-            <div className="user-profile">
-              <div style={{ textAlign: 'right' }}>
-                <div style={{ fontWeight: '600', fontSize: '14px' }}>{state.user.name}</div>
-                <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>{state.user.targetGoal}</div>
-              </div>
-              <div className="user-avatar">
-                {state.user.name.charAt(0)}
-              </div>
-            </div>
-    
 
           <main className="view-content">
             <Routes>
