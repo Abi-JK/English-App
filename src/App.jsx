@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import { LayoutDashboard, BookOpen, UserCheck, MessageSquare, Award, Flame, Menu, X, Brain, FileText } from 'lucide-react';
 import { useAppContext, AppProvider } from './context/AppContext';
 import Navbar from './components/Navbar';

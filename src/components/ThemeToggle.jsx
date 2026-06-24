@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Sun, Moon } from 'lucide-react';
 
+// ThemeToggle now receives theme and setTheme via props for external control
 const ThemeToggle = ({ theme, setTheme }) => {
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
@@ -9,7 +10,7 @@ const ThemeToggle = ({ theme, setTheme }) => {
     document.documentElement.setAttribute('data-theme', newTheme);
   };
 
-  // Sync on mount in case theme changed outside
+  // Sync on mount in case theme changed outside this component
   useEffect(() => {
     const stored = localStorage.getItem('theme') || 'dark';
     if (stored !== theme) setTheme(stored);

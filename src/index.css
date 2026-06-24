@@ -1,15 +1,26 @@
 :root {
   --primary-color: #009688;
   --primary-hover: #00796b;
-  --bg-color: #0f172a;
-  --surface-color: #1e293b;
+  --bg-color: #0b0f19;
+  --surface-color: #151d30;
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
-  --border-color: #334155;
+  --border-color: #222f47;
   --accent-color: #f59e0b;
   --success-color: #10b981;
   --danger-color: #ef4444;
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] {
+  --bg-color: #f4f6fa;
+  --surface-color: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --primary-color: #009688;
+  --card-shadow: 0 8px 24px rgba(148, 163, 184, 0.12);
 }
 
 * {
@@ -24,6 +35,7 @@ body {
   font-family: var(--font-family);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -38,51 +50,61 @@ a {
 
 /* Sidebar Styles */
 .sidebar {
-  width: 260px;
+  width: 280px;
   background-color: var(--surface-color);
   border-right: 1px solid var(--border-color);
-  padding: 24px;
+  padding: 28px 24px;
   display: flex;
   flex-direction: column;
+  transition: all 0.3s ease;
+  z-index: 100;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 40px;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--primary-color);
+  margin-bottom: 36px;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.5px;
 }
 
 .nav-menu {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .nav-item {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 16px;
+  padding: 11px 14px;
   border-radius: 8px;
   color: var(--text-muted);
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 14px;
   transition: all 0.2s ease;
   cursor: pointer;
+  border: 1px solid transparent;
 }
 
 .nav-item:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.03);
   color: var(--text-main);
 }
 
+[data-theme="light"] .nav-item:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
 .nav-item.active {
-  background-color: rgba(0, 150, 136, 0.1);
+  background-color: rgba(0, 150, 136, 0.08);
   color: var(--primary-color);
+  border-color: rgba(0, 150, 136, 0.15);
 }
 
 /* Main Content Area */
@@ -90,6 +112,7 @@ a {
   flex: 1;
   display: flex;
   flex-direction: column;
+  max-width: 100%;
 }
 
 .top-header {
@@ -109,48 +132,65 @@ a {
 }
 
 .user-avatar {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
+  color: white;
+  font-weight: 800;
+  font-size: 14px;
 }
 
 .view-content {
   padding: 32px;
   flex: 1;
   overflow-y: auto;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /* Reusable UI Components */
 .card {
   background-color: var(--surface-color);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 24px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--card-shadow);
   margin-bottom: 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 150, 136, 0.3);
 }
 
 .btn-primary {
   background-color: var(--primary-color);
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: 600;
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.2s;
-  display: flex;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
+  justify-content: center;
 }
 
 .btn-primary:hover {
   background-color: var(--primary-hover);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
 }
 
 .btn-secondary {
@@ -158,40 +198,52 @@ a {
   color: var(--text-main);
   border: 1px solid var(--border-color);
   padding: 10px 20px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: 600;
+  font-size: 14px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
 }
 
 .btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.03);
+  border-color: var(--text-muted);
+}
+
+[data-theme="light"] .btn-secondary:hover {
+  background-color: rgba(0, 0, 0, 0.02);
 }
 
 .glass-panel {
-  background: rgba(30, 41, 59, 0.7);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  background: rgba(21, 29, 48, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
 }
 
 .progress-bar-bg {
   width: 100%;
   height: 8px;
   background-color: var(--border-color);
-  border-radius: 4px;
+  border-radius: 6px;
   overflow: hidden;
 }
 
 .progress-bar-fill {
   height: 100%;
   background-color: var(--primary-color);
-  transition: width 0.5s ease;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1, h2, h3, h4 {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   color: var(--text-main);
+  font-weight: 800;
+  letter-spacing: -0.5px;
 }
 
 .text-muted {
@@ -199,6 +251,12 @@ h1, h2, h3, h4 {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 250px;
+  }
+}
+
 @media (max-width: 768px) {
   .app-container {
     flex-direction: column;
@@ -208,22 +266,17 @@ h1, h2, h3, h4 {
     width: 100%;
     position: fixed;
     height: 100vh;
-    z-index: 1000;
     transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
+    box-shadow: 10px 0 30px rgba(0,0,0,0.5);
   }
 
   .sidebar.mobile-open {
     transform: translateX(0);
   }
 
-  .main-content {
-    margin-top: 0;
-  }
-
   .top-header {
-    padding: 0 16px;
-    height: 60px;
+    padding: 0 20px;
+    height: 64px;
   }
 
   .mobile-menu-btn {
@@ -232,10 +285,11 @@ h1, h2, h3, h4 {
     border: none;
     color: var(--text-main);
     cursor: pointer;
+    align-items: center;
   }
 
   .view-content {
-    padding: 16px;
+    padding: 20px;
   }
 }
 
