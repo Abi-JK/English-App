@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const AppContext = createContext();
 
-const STATE_KEY = 'aura_english_state';
+const STATE_KEY = 'speakup_state';
 
 const defaultState = {
     user: {

@@ -28,8 +28,8 @@ const Navbar = ({ toggleMobileMenu, theme, setTheme }) => {
         }} aria-label="Open menu">
           <Menu size={24} />
         </button>
-        <div style={{ fontWeight: '800', fontSize: '18px', color: 'var(--text-main)', letterSpacing: '-0.5px' }}>
-          Aura English
+        <div style={{ fontWeight: '800', fontSize: '20px', letterSpacing: '-0.5px', background: 'linear-gradient(135deg, var(--primary-color), #6366f1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+          SpeakUp
         </div>
       </div>
 

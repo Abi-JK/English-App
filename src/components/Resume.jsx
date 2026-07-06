@@ -261,7 +261,7 @@ const Resume = () => {
                   <div style={{ fontSize: '42px', fontWeight: '800', color: analysis.score >= 80 ? 'var(--success-color)' : 'var(--accent-color)' }}>
                     {analysis.score}<span style={{ fontSize: '18px', fontWeight: 'normal', color: 'var(--text-muted)' }}>/100</span>
                   </div>
-                  <span style={{ fontSize: '12px', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 'bold' }}>Aura Grade</span>
+                  <span style={{ fontSize: '12px', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 'bold' }}>SpeakUp Grade</span>
                 </div>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>

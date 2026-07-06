@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
-import { LayoutDashboard, BookOpen, UserCheck, MessageSquare, Award, Flame, Menu, X, Brain, FileText } from 'lucide-react';
+import { LayoutDashboard, BookOpen, UserCheck, MessageSquare, Menu, X, Brain, FileText, PenSquare, Layers, Gamepad2, Mic } from 'lucide-react';
 import { useAppContext, AppProvider } from './context/AppContext';
 import Navbar from './components/Navbar';
 import ThemeToggle from './components/ThemeToggle';
@@ -11,6 +11,9 @@ import InterviewPrep from './components/InterviewPrep';
 import Conversation from './components/Conversation';
 import LearningHub from './components/LearningHub';
 import Resume from './components/Resume';
+import WritingLab from './components/WritingLab';
+import PhrasalVerbs from './components/PhrasalVerbs';
+import VocabGames from './components/VocabGames';
 
 const App = () => {
   const { state } = useAppContext();
@@ -43,9 +46,9 @@ const App = () => {
           </button>
           <div className="logo-container">
             <div className="logo-icon" style={{ backgroundColor: 'var(--primary-color)', color: 'white', padding: '8px', borderRadius: '8px' }}>
-              <BookOpen size={24} />
+              <Mic size={24} />
             </div>
-            AuraEnglish
+            SpeakUp
           </div>
 
           <div style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: '700', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '8px', paddingLeft: '8px' }}>
@@ -59,7 +62,16 @@ const App = () => {
               <Brain size={20} /> Learning Hub
             </NavLink>
             <NavLink to="/conversation" onClick={closeMobileMenu} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-              <MessageSquare size={20} /> Practice English
+              <MessageSquare size={20} /> Practice Speaking
+            </NavLink>
+            <NavLink to="/games" onClick={closeMobileMenu} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+              <Gamepad2 size={20} /> Vocab Games 🎮
+            </NavLink>
+            <NavLink to="/writing" onClick={closeMobileMenu} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+              <PenSquare size={20} /> Writing Lab
+            </NavLink>
+            <NavLink to="/phrasal" onClick={closeMobileMenu} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+              <Layers size={20} /> Phrasal Verbs
             </NavLink>
           </ul>
 
@@ -74,13 +86,13 @@ const App = () => {
               <UserCheck size={20} /> MNC Interview Prep
             </NavLink>
             <NavLink to="/resume" onClick={closeMobileMenu} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-              <FileText size={20} /> Resume Builder & Review
+              <FileText size={20} /> Resume Builder
             </NavLink>
           </ul>
 
           <div style={{ marginTop: 'auto', padding: '16px', background: 'rgba(0,150,136,0.08)', borderRadius: '10px', textAlign: 'center' }}>
-            <div style={{ fontSize: '24px', marginBottom: '4px' }}>🎯</div>
-            <div style={{ fontSize: '12px', color: 'var(--text-muted)' }}>Study Daily. Grow Faster.</div>
+            <div style={{ fontSize: '24px', marginBottom: '4px' }}>🎙️</div>
+            <div style={{ fontSize: '12px', color: 'var(--text-muted)' }}>Speak up. Grow every day.</div>
           </div>
         </div>
 
@@ -96,6 +108,9 @@ const App = () => {
               <Route path="/interview" element={<InterviewPrep />} />
               <Route path="/conversation" element={<Conversation />} />
               <Route path="/resume" element={<Resume />} />
+              <Route path="/writing" element={<WritingLab />} />
+              <Route path="/phrasal" element={<PhrasalVerbs />} />
+              <Route path="/games" element={<VocabGames />} />
             </Routes>
           </main>
         </div>

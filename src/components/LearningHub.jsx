@@ -91,6 +91,66 @@ const grammarRules = [
       { wrong: "I will go if she comes and bring food.", right: "I will go if she comes and brings food." }
     ],
     tip: '⚡ Quick Tip: In "If" conditional sentences — If + present → future. If + past → would.'
+  },
+  {
+    id: 'g4',
+    title: 'Active vs Passive Voice',
+    tag: 'Exam Important',
+    tagColor: '#f59e0b',
+    rule: 'In active voice, subject performs the action. In passive voice, subject receives the action.',
+    examples: [
+      { wrong: "The report was wrote by him.", right: "The report was written by him." },
+      { wrong: "The manager is approved the request.", right: "The request is approved by the manager." }
+    ],
+    tip: '⚡ Quick Tip: Passive = form of "be" + Past Participle (V3). "was written", "is approved", "will be completed".'
+  },
+  {
+    id: 'g5',
+    title: 'Prepositions of Time & Place',
+    tag: 'Common Error',
+    tagColor: '#06b6d4',
+    rule: 'Use "at" for specific points, "on" for surfaces/days, "in" for enclosed spaces/months/years.',
+    examples: [
+      { wrong: "I will meet you in Monday.", right: "I will meet you on Monday." },
+      { wrong: "She lives at Chennai.", right: "She lives in Chennai." }
+    ],
+    tip: '⚡ Quick Tip: at (specific): at 5pm, at home. on (day/date): on Friday. in (period/place): in June, in India.'
+  },
+  {
+    id: 'g6',
+    title: 'Direct & Indirect Speech',
+    tag: 'Exam Important',
+    tagColor: '#ec4899',
+    rule: 'When converting direct speech to indirect, tense usually shifts back one step.',
+    examples: [
+      { wrong: 'He said that he is coming.', right: 'He said that he was coming.' },
+      { wrong: 'She asked that where are you going.', right: 'She asked where I was going.' }
+    ],
+    tip: '⚡ Quick Tip: Present → Past. "will" → "would". "can" → "could". Remove quotes, add "that", change pronouns.'
+  },
+  {
+    id: 'g7',
+    title: 'Question Tags',
+    tag: 'Must Know',
+    tagColor: '#6366f1',
+    rule: 'Positive statement → negative tag. Negative statement → positive tag.',
+    examples: [
+      { wrong: "You are coming, are you?", right: "You are coming, aren't you?" },
+      { wrong: "She didn't go, didn't she?", right: "She didn't go, did she?" }
+    ],
+    tip: '⚡ Quick Tip: Match the auxiliary verb (do/does/did/have/will/can) in the tag. "He can swim, can\'t he?"'
+  },
+  {
+    id: 'g8',
+    title: 'Relative Clauses (Who/Which/That/Whom)',
+    tag: 'Advanced',
+    tagColor: '#a855f7',
+    rule: 'Use "who" for people, "which" for things, "that" for both (in defining clauses). "Whom" for object of verb.',
+    examples: [
+      { wrong: "The man which called you is here.", right: "The man who called you is here." },
+      { wrong: "This is the book who I bought.", right: "This is the book which I bought." }
+    ],
+    tip: '⚡ Quick Tip: People → who/whom. Things → which/that. Possession → whose. "The student whose bag was lost..."'
   }
 ];
 
@@ -98,7 +158,15 @@ const idioms = [
   { phrase: 'Hit the ground running', meaning: 'To begin a job or project with great energy and effort', use: 'He hit the ground running on his first day at the MNC.' },
   { phrase: 'Touch base', meaning: 'To briefly contact someone or check in with them', use: 'Let\'s touch base tomorrow to discuss the project.' },
   { phrase: 'Think outside the box', meaning: 'To think creatively or unconventionally', use: 'The manager asked us to think outside the box for new solutions.' },
-  { phrase: 'Get the ball rolling', meaning: 'To start something, especially something big', use: 'Let\'s get the ball rolling on the new campaign.' }
+  { phrase: 'Get the ball rolling', meaning: 'To start something, especially something big', use: 'Let\'s get the ball rolling on the new campaign.' },
+  { phrase: 'Keep me in the loop', meaning: 'To keep someone informed about developments', use: 'Please keep me in the loop regarding the project status.' },
+  { phrase: 'Bite the bullet', meaning: 'To face a difficult situation bravely', use: 'I decided to bite the bullet and give the presentation.' },
+  { phrase: 'Cutting corners', meaning: 'Doing something poorly to save time or money', use: 'We should never cut corners on quality testing.' },
+  { phrase: 'Call it a day', meaning: 'To stop working for the day', use: 'We have done enough for today, let\'s call it a day.' },
+  { phrase: 'On the same page', meaning: 'To have a shared understanding or agreement', use: 'Let\'s have a meeting to ensure we are all on the same page.' },
+  { phrase: 'Go the extra mile', meaning: 'To make more effort than expected', use: 'She always goes the extra mile to help her team members.' },
+  { phrase: 'Ballpark figure', meaning: 'A rough estimate or approximate number', use: 'Can you give me a ballpark figure for the project cost?' },
+  { phrase: 'Take it easy', meaning: 'To relax and not worry too much', use: 'You have been working hard, take it easy this weekend.' }
 ];
 
 // Speak Text helper

@@ -255,6 +255,9 @@ h1, h2, h3, h4 {
   .sidebar {
     width: 250px;
   }
+  .view-content {
+    padding: 24px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -263,11 +266,14 @@ h1, h2, h3, h4 {
   }
 
   .sidebar {
-    width: 100%;
+    width: 280px;
     position: fixed;
     height: 100vh;
     transform: translateX(-100%);
     box-shadow: 10px 0 30px rgba(0,0,0,0.5);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    overflow-y: auto;
   }
 
   .sidebar.mobile-open {
@@ -275,8 +281,9 @@ h1, h2, h3, h4 {
   }
 
   .top-header {
-    padding: 0 20px;
-    height: 64px;
+    padding: 0 16px;
+    height: 60px;
+    gap: 8px;
   }
 
   .mobile-menu-btn {
@@ -289,7 +296,48 @@ h1, h2, h3, h4 {
   }
 
   .view-content {
-    padding: 20px;
+    padding: 16px;
+    max-width: 100%;
+  }
+
+  .stats-header {
+    gap: 8px !important;
+  }
+
+  .stats-header > div {
+    padding: 4px 10px !important;
+    font-size: 11px !important;
+  }
+
+  .user-profile-text {
+    display: none !important;
+  }
+
+  .user-avatar {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 11px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .view-content {
+    padding: 12px;
+  }
+
+  .top-header {
+    padding: 0 12px;
+    height: 56px;
+  }
+
+  .stats-header > div {
+    padding: 3px 8px !important;
+    font-size: 10px !important;
+  }
+
+  .stats-header > div svg {
+    width: 14px !important;
+    height: 14px !important;
   }
 }
 
@@ -306,10 +354,32 @@ h1, h2, h3, h4 {
   position: absolute;
   top: 24px;
   right: 24px;
+  z-index: 10;
 }
 
 @media (max-width: 768px) {
   .close-sidebar-btn {
     display: block;
+  }
+}
+
+/* Card hover disabled on touch devices */
+@media (hover: none) {
+  .card:hover {
+    transform: none !important;
+    border-color: var(--border-color) !important;
+  }
+  .nav-item:hover {
+    background-color: transparent !important;
+  }
+}
+
+/* Mobile grid fixes for inline styles in components */
+@media (max-width: 768px) {
+  .view-content > div > div[style*="gridTemplateColumns"] {
+    grid-template-columns: 1fr !important;
+  }
+  .view-content > div > div > div[style*="gridTemplateColumns"] {
+    grid-template-columns: 1fr !important;
   }
 }

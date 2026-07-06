@@ -83,6 +83,46 @@ const questionSets = {
         options: ['who', 'whom', 'whose', 'which'],
         answer: 2,
         explanation: '"Whose" is a possessive relative pronoun. It is used to show ownership of the resume. (தமிழ் விளக்கம்: "Whose" என்பது யாருடைய என்ற உடைமையைக் குறிக்கும் சொல். "எந்த வேட்பாளரின் resume பார்க்கப்பட்டதோ..." என்று குறிக்க "whose" பயன்படுத்தப்படுகிறது.)'
+      },
+      {
+        id: 't11', topic: 'Tense',
+        question: 'Choose the correct form: "By next year, she ______ here for five years."',
+        options: ['works', 'will have worked', 'had worked', 'has been working'],
+        answer: 1,
+        explanation: '"By next year" refers to a future point, so we use Future Perfect "will have worked" to show an action completed by that time. (தமிழ் விளக்கம்: "By next year" என்பது எதிர்காலத்தில் ஒரு குறிப்பிட்ட நேரத்தைக் குறிக்கிறது. அந்த நேரத்திற்குள் நிறைவடையும் செயலைக் காட்ட "will have worked" பயன்படுத்தப்படுகிறது.)'
+      },
+      {
+        id: 't12', topic: 'Preposition',
+        question: 'Choose the correct preposition: "She is very good ______ mathematics."',
+        options: ['in', 'at', 'on', 'with'],
+        answer: 1,
+        explanation: 'The correct idiom is "good at" something. "Good in" is incorrect. (தமிழ் விளக்கம்: ஒரு துறையில் திறமை உள்ளவரைக் குறிக்க "good at" பயன்படுத்த வேண்டும். "Good in" என்பது தவறான வழக்கு.)'
+      },
+      {
+        id: 't13', topic: 'Voice Change',
+        question: 'Convert to Active Voice: "The report was submitted by the manager yesterday."',
+        options: [
+          'The manager submitted the report yesterday.',
+          'The manager was submitted the report yesterday.',
+          'The report submitted the manager yesterday.',
+          'The manager had submitted the report yesterday.'
+        ],
+        answer: 0,
+        explanation: 'In active voice, the subject (the manager) performs the action. Past simple passive → Past simple active. (தமிழ் விளக்கம்: செய்வினையில் (Active voice), எழுவாய் (Subject) செயலைச் செய்கிறது. "The manager submitted the report" என்பதே சரியான செய்வினை வடிவம்.)'
+      },
+      {
+        id: 't14', topic: 'Question Tag',
+        question: 'Complete the question tag: "You have completed your work, ______?"',
+        options: ['have you?', 'haven\'t you?', 'didn\'t you?', 'don\'t you?'],
+        answer: 1,
+        explanation: 'For positive statements with "have", the question tag is negative "haven\'t you?". (தமிழ் விளக்கம்: நேர்மறை வாக்கியத்திற்கு எதிர்மறை question tag வரும். "have" இருப்பதால் "haven\'t you?" சரியானது.)'
+      },
+      {
+        id: 't15', topic: 'Adverb',
+        question: 'Choose the correct order: "She speaks English ______."',
+        options: ['very fluently well', 'very well fluently', 'very fluently', 'fluently very well'],
+        answer: 2,
+        explanation: 'Adverb of manner "fluently" can be modified by "very". "Very fluently" is the correct order. (தமிழ் விளக்கம்: "fluently" என்பது வினையுரிச்சொல். அதை "very" கொண்டு மாற்றலாம். "Very fluently" என்பதே சரியான வரிசை.)'
       }
     ]
   },
@@ -157,6 +197,44 @@ const questionSets = {
         options: ['Maintanance', 'Maintenance', 'Maintenence', 'Maintainance'],
         answer: 1,
         explanation: 'The correct spelling is "Maintenance" (no "a" in the suffix). (தமிழ் விளக்கம்: "Maintenance" (பராமரிப்பு) என்பது சரியான எழுத்துக்கோவை ஆகும். பல பொதுத்தேர்வுகளில் அடிக்கடி கேட்கப்படும் கேள்வி.)'
+      },
+      {
+        id: 's9', topic: 'Phrase Substitution',
+        question: 'Choose the correct phrase: "He walked ______ the room without making a sound."',
+        options: ['in to', 'into', 'in', 'onto'],
+        answer: 1,
+        explanation: '"Into" indicates movement from outside to inside. "In to" is incorrect here. (தமிழ் விளக்கம்: வெளியிலிருந்து உள்ளே செல்வதைக் குறிக்க "into" பயன்படுத்தப்படுகிறது. "In to" என்பது தவறு.)'
+      },
+      {
+        id: 's10', topic: 'Narration',
+        question: 'Convert to Indirect Speech: "He said, \'I am busy right now.\'"',
+        options: [
+          'He said that he is busy right now.',
+          'He said that he was busy then.',
+          'He said that I am busy right now.',
+          'He says that he was busy.'
+        ],
+        answer: 1,
+        explanation: 'In indirect speech, present tense changes to past, and "right now" changes to "then". (தமிழ் விளக்கம்: அயல் கூற்றில் (Indirect Speech), நிகழ்காலம் இறந்தகாலமாக மாறும். "Right now" → "then" ஆக மாறும்.)'
+      },
+      {
+        id: 's11', topic: 'Conjunction',
+        question: 'Fill in: "Work hard ______ you will fail the exam."',
+        options: ['and', 'or', 'but', 'so'],
+        answer: 1,
+        explanation: '"Or" indicates a consequence/alternative. "Work hard or you will fail" = if you don\'t work hard, you will fail. (தமிழ் விளக்கம்: "Or" இணைப்புச்சொல் மாற்று விளைவைக் காட்டுகிறது. "கடினமாகப் படி, இல்லையேல் தோல்வியடைவாய்" என்பது பொருள்.)'
+      },
+      {
+        id: 's12', topic: 'Adjective Order',
+        question: 'Arrange in correct order: "She bought a ______ dress."',
+        options: [
+          'beautiful red silk Indian',
+          'Indian red beautiful silk',
+          'silk beautiful red Indian',
+          'red beautiful Indian silk'
+        ],
+        answer: 0,
+        explanation: 'Adjective order rule: Opinion (beautiful) → Color (red) → Material (silk) → Origin (Indian). (தமிழ் விளக்கம்: பெயரடை வரிசை: கருத்து → நிறம் → பொருள் → தோற்றம். "Beautiful red silk Indian" என்பதே சரியான வரிசை.)'
       }
     ]
   },
@@ -203,6 +281,34 @@ const questionSets = {
         options: ['Neither the project director', 'nor the developers', 'was present', 'No error'],
         answer: 2,
         explanation: 'Rule: When subjects are joined by "neither... nor", the verb agrees with the closer subject ("developers" which is plural, so it should be "were"). (தமிழ் விளக்கம்: "neither... nor" வரும்போது, வினைச்சொல் (verb) தனக்கு அருகில் இருக்கும் பெயரைக் கொண்டு ஒருமையா அல்லது பன்மையா என்று தீர்மானிக்கப்படும். "developers" பன்மை என்பதால் "were" வர வேண்டும்.)'
+      },
+      {
+        id: 'b5', topic: 'Cloze Test',
+        question: 'Fill in the blank: "The RBI has ______ new guidelines for digital lending to protect borrowers."',
+        options: ['put out', 'brought in', 'taken over', 'laid down'],
+        answer: 3,
+        explanation: '"Laid down" means to officially establish rules or guidelines. (தமிழ் விளக்கம்: "Laid down" என்றால் அதிகாரப்பூர்வமாக விதிகள் அல்லது வழிகாட்டுதல்களை நிறுவுதல். ஏனைய விருப்பங்கள் பொருந்தாது.)'
+      },
+      {
+        id: 'b6', topic: 'Reading Comprehension',
+        question: 'Choose the correct meaning: "The word \'deteriorate\' in the passage most nearly means:"',
+        options: ['Improve (மேம்படுத்த)', 'Worsen (மோசமடைதல்)', 'Remain stable (நிலையாக இருத்தல்)', 'Accelerate (வேகமடைதல்)'],
+        answer: 1,
+        explanation: '"Deteriorate" means to become worse in quality or condition. (தமிழ் விளக்கம்: "Deteriorate" என்பது தரம் அல்லது நிலையில் மோசமடைதலை குறிக்கும். வங்கித் தேர்வுகளில் Reading Comprehension பகுதியில் அடிக்கடி வரும் சொல்.)'
+      },
+      {
+        id: 'b7', topic: 'Para Jumble',
+        question: 'Arrange the sentences in logical order: A) However, the project was delayed due to unforeseen issues. B) The team worked tirelessly to meet the deadline. C) Finally, the client appreciated their efforts. D) The initial plan was to launch in March.',
+        options: ['D, A, B, C', 'B, D, A, C', 'A, C, B, D', 'D, B, A, C'],
+        answer: 0,
+        explanation: 'Logical order: Initial plan (D) → Delay (A) → Team effort (B) → Client appreciation (C). (தமிழ் விளக்கம்: சரியான வரிசை: ஆரம்ப திட்டம் → தாமதம் → அணியின் முயற்சி → வாடிக்கையாளர் பாராட்டு. இது தான் தர்க்கரீதியான வரிசை.)'
+      },
+      {
+        id: 'b8', topic: 'Vocabulary',
+        question: 'Choose the word most similar in meaning to "Mitigate":',
+        options: ['Aggravate (மோசமாக்கு)', 'Alleviate (குறைத்தல்)', 'Eliminate (முற்றிலும் அகற்று)', 'Ignore (புறக்கணி)'],
+        answer: 1,
+        explanation: '"Mitigate" means to make less severe. "Alleviate" has the same meaning. (தமிழ் விளக்கம்: "Mitigate" என்றால் கடுமையைக் குறைத்தல். "Alleviate" என்பது இதற்கு இணையான பொருளுடைய சொல்.)'
       }
     ]
   }
@@ -383,10 +489,13 @@ const ExamCenter = () => {
   const [activeTab, setActiveTab] = useState('quizzes');
 
   const notes = [
-    { title: '📌 Subject-Verb Agreement', content: '• Singular subject → singular verb. "Each student HAS..."\n• "Either/Neither/Everyone/Each" → always singular verb.\n• Two subjects joined by "and" → plural verb.\n• "The news IS..." (looks plural but singular noun).' },
-    { title: '📌 Direct & Indirect Speech', content: '• Present Simple → Past Simple ("I work" → "He said he worked")\n• Present Continuous → Past Continuous\n• "Will" → "Would"\n• Exception: Universal truths do NOT change tense.\n  "The earth revolves around the sun." ✅' },
-    { title: '📌 Tense Formula Sheet', content: '• Simple Past: V2 (went, did, saw)\n• Present Perfect: has/have + V3\n• Past Perfect: had + V3\n• Future: will + V1\n• Conditional: If + past → would (If I knew, I would tell)' },
-    { title: '📌 Common Prepositions', content: '• at: specific time/place (at 5 PM, at home)\n• on: days/dates (on Monday, on 5th June)\n• in: months/years/large places (in June, in India)\n• for: duration (for 3 years)\n• since: point in time (since 2020)' },
+    { title: '📌 Subject-Verb Agreement', content: '• Singular subject → singular verb. "Each student HAS..."\n• "Either/Neither/Everyone/Each" → always singular verb.\n• Two subjects joined by "and" → plural verb.\n• "The news IS..." (looks plural but singular noun).\n• Collective nouns (team, committee, family) → singular verb when acting as one unit.' },
+    { title: '📌 Direct & Indirect Speech', content: '• Present Simple → Past Simple ("I work" → "He said he worked")\n• Present Continuous → Past Continuous\n• "Will" → "Would"\n• "Can" → "Could"\n• "May" → "Might"\n• Exception: Universal truths do NOT change tense.\n  "The earth revolves around the sun." ✅' },
+    { title: '📌 Tense Formula Sheet', content: '• Simple Past: V2 (went, did, saw)\n• Present Perfect: has/have + V3\n• Past Perfect: had + V3\n• Future: will + V1\n• Conditional Type 1: If + present → will (If it rains, I will stay)\n• Conditional Type 2: If + past → would (If I knew, I would tell)\n• Conditional Type 3: If + had V3 → would have V3 (If I had known, I would have come)' },
+    { title: '📌 Common Prepositions', content: '• at: specific time/place (at 5 PM, at home)\n• on: days/dates (on Monday, on 5th June)\n• in: months/years/large places (in June, in India)\n• for: duration (for 3 years)\n• since: point in time (since 2020)\n• by: deadline (by Friday, by 6 PM)\n• until/till: up to a point (until Monday)' },
+    { title: '📌 Active & Passive Voice Rules', content: '• Simple Present: He writes → It is written\n• Simple Past: He wrote → It was written\n• Present Continuous: He is writing → It is being written\n• Present Perfect: He has written → It has been written\n• Modal: He can write → It can be written\n• Key: The object of active sentence becomes the subject of passive sentence.' },
+    { title: '📌 Articles (A, An, The)', content: '• "A" before consonant sounds: a book, a university, a European\n• "An" before vowel sounds: an apple, an hour, an honest man\n• "The" for specific/known items: the sun, the Earth, the book you gave me\n• No article before plural general statements: Books are useful. (not The books are useful)\n• No article before proper nouns: I live in India. (not the India)' },
+    { title: '📌 Commonly Confused Words', content: '• Their (அவர்களுடைய) / There (அங்கே) / They\'re (அவர்கள்)\n• Your (உங்களுடைய) / You\'re (நீங்கள்)\n• Its (அதன்) / It\'s (அது)\n• Affect (பாதிப்பு - verb) / Effect (விளைவு - noun)\n• Accept (ஏற்றுக்கொள்) / Except (தவிர)\n• Complement (நிறைவு) / Compliment (பாராட்டு)' },
   ];
 
   const strategies = [
@@ -404,6 +513,16 @@ const ExamCenter = () => {
       title: '⚡ Previous Years\' Questions (PYQ) Crack Strategy (கடந்த கால வினாத்தாள் உத்தி)',
       desc: 'Solve at least 10 previous years\' question sets. Grammatical patterns repeat constantly! Take note of questions testing articles ("an honest man", "a university") and subject-verb inversion (e.g. "Hardly had I arrived...").',
       tamil: 'தமிழ் குறிப்பு: குறைந்தபட்சம் 10 வருட பழைய வினாத்தாள்களை பயிற்சி செய்யுங்கள். ஏனெனில், இலக்கண அமைப்புகள் அடிக்கடி மீண்டும் மீண்டும் கேட்கப்படும். குறிப்பாக "honest", "hour" போன்ற சொற்களுக்கு "an" பயன்படுத்துவதை நினைவில் கொள்ளுங்கள்.'
+    },
+    {
+      title: '📝 Time Management in English Section (நேர மேலாண்மை)',
+      desc: 'Allocate maximum 20-25 minutes for the English section in a 2-hour exam. Start with Reading Comprehension (takes the longest), then move to Error Spotting, followed by Grammar, and finish with Vocabulary questions which are quickest.',
+      tamil: 'தமிழ் குறிப்பு: 2 மணி நேர தேர்வில் English பகுதிக்கு அதிகபட்சம் 20-25 நிமிடங்கள் ஒதுக்கவும். முதலில் Reading Comprehension (அதிக நேரம் எடுக்கும்), பின் Error Spotting, Grammar, இறுதியாக Vocabulary (வேகமானது).'
+    },
+    {
+      title: '📚 Best Books & Resources for English Preparation (சிறந்த புத்தகங்கள்)',
+      desc: '1. "Objective General English" by SP Bakshi (Best for SSC/Banking)\n2. "English for Competitive Exams" by Wren & Martin\n3. "Word Power Made Easy" by Norman Lewis (Vocabulary)\n4. Previous Year Question Papers from the last 10 years\n5. Daily reading of The Hindu Editorial (for Reading Comprehension)',
+      tamil: 'தமிழ் குறிப்பு: SP Bakshi புத்தகம் SSC/Banking தேர்வுகளுக்கு மிகவும் பயனுள்ளது. Wren & Martin இலக்கணத்திற்கு சிறந்தது. தினமும் The Hindu பத்திரிகையின் Editorial பகுதியை படிக்க பழகுங்கள் - Reading Comprehension-க்கு மிகவும் உதவும்.'
     }
   ];
 
