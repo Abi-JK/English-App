@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
-import { LayoutDashboard, BookOpen, UserCheck, MessageSquare, Menu, X, Brain, FileText, PenSquare, Layers, Gamepad2, Mic } from 'lucide-react';
-import { useAppContext, AppProvider } from './context/AppContext';
+import { LayoutDashboard, BookOpen, UserCheck, MessageSquare, X, Brain, FileText, PenSquare, Layers, Gamepad2, Mic, Headphones, BookMarked } from 'lucide-react';
+import { useAppContext } from './context/AppContext';
 import Navbar from './components/Navbar';
-import ThemeToggle from './components/ThemeToggle';
 
 import Dashboard from './components/Dashboard';
 import ExamCenter from './components/ExamCenter';
@@ -14,6 +13,9 @@ import Resume from './components/Resume';
 import WritingLab from './components/WritingLab';
 import PhrasalVerbs from './components/PhrasalVerbs';
 import VocabGames from './components/VocabGames';
+import ListeningLab from './components/ListeningLab';
+import ReadingLab from './components/ReadingLab';
+import Bookmarks from './components/Bookmarks';
 
 const App = () => {
   const { state } = useAppContext();
@@ -73,6 +75,15 @@ const App = () => {
             <NavLink to="/phrasal" onClick={closeMobileMenu} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
               <Layers size={20} /> Phrasal Verbs
             </NavLink>
+            <NavLink to="/listening" onClick={closeMobileMenu} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+              <Headphones size={20} /> Listening Lab
+            </NavLink>
+            <NavLink to="/reading" onClick={closeMobileMenu} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+              <BookOpen size={20} /> Reading Lab
+            </NavLink>
+            <NavLink to="/bookmarks" onClick={closeMobileMenu} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+              <BookMarked size={20} /> Bookmarks
+            </NavLink>
           </ul>
 
           <div style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: '700', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '8px', paddingLeft: '8px' }}>
@@ -111,6 +122,9 @@ const App = () => {
               <Route path="/writing" element={<WritingLab />} />
               <Route path="/phrasal" element={<PhrasalVerbs />} />
               <Route path="/games" element={<VocabGames />} />
+              <Route path="/listening" element={<ListeningLab />} />
+              <Route path="/reading" element={<ReadingLab />} />
+              <Route path="/bookmarks" element={<Bookmarks />} />
             </Routes>
           </main>
         </div>

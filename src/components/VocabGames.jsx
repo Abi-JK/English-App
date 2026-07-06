@@ -1,45 +1,14 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Gamepad2, RotateCcw, Trophy, Clock, Zap, ArrowRight, Volume2 } from 'lucide-react';
 import { useAppContext } from '../context/AppContext';
-
-// ─── SHARED WORD BANK ────────────────────────────────────────────────────────
-
-const wordBank = [
-  { word: 'Accomplish', meaning: 'To achieve or complete successfully', tamil: 'சாதிக்க / நிறைவேற்ற', hint: 'Complete a goal' },
-  { word: 'Eloquent', meaning: 'Fluent and persuasive in speech', tamil: 'சொல்லாட்சி வல்லவர்', hint: 'Speaks beautifully' },
-  { word: 'Tenacious', meaning: 'Determined; not giving up easily', tamil: 'விடாமுயற்சி', hint: 'Never stops trying' },
-  { word: 'Meticulous', meaning: 'Great attention to detail', tamil: 'நுண்ணிய கவனம்', hint: 'Every detail matters' },
-  { word: 'Proactive', meaning: 'Taking action before problems arise', tamil: 'முன்கூட்டியே செயல்படு', hint: 'Acts before issues' },
-  { word: 'Articulate', meaning: 'Able to express ideas clearly', tamil: 'தெளிவாக பேசும் திறன்', hint: 'Speaks with clarity' },
-  { word: 'Resilient', meaning: 'Recovers quickly from difficulties', tamil: 'மீள்திறன்', hint: 'Bounces back' },
-  { word: 'Candid', meaning: 'Truthful and straightforward', tamil: 'நேர்மையான', hint: 'Honestly direct' },
-  { word: 'Proficient', meaning: 'Skilled and competent', tamil: 'திறமையான', hint: 'Expert at something' },
-  { word: 'Diligent', meaning: 'Careful and hard-working', tamil: 'உழைப்பாளி', hint: 'Works consistently' },
-  { word: 'Leverage', meaning: 'Use something to maximum advantage', tamil: 'சிறப்பாக பயன்படுத்து', hint: 'Maximize advantage' },
-  { word: 'Empathy', meaning: 'Understanding others feelings', tamil: 'பிறர் உணர்வை புரிவது', hint: 'Feeling with others' },
-  { word: 'Integrity', meaning: 'Being honest with strong values', tamil: 'நேர்மை / ஒழுக்கம்', hint: 'Strong moral values' },
-  { word: 'Versatile', meaning: 'Able to adapt to many situations', tamil: 'பல்வேறு திறன்கள்', hint: 'Multi-talented' },
-  { word: 'Concise', meaning: 'Giving information in few words', tamil: 'சுருக்கமான', hint: 'Brief but complete' },
-  { word: 'Ambiguous', meaning: 'Open to more than one meaning', tamil: 'தெளிவற்ற', hint: 'Could mean anything' },
-  { word: 'Arduous', meaning: 'Very difficult requiring great effort', tamil: 'கஷ்டமான', hint: 'Extremely tough' },
-  { word: 'Lucid', meaning: 'Expressed clearly and easy to understand', tamil: 'தெளிவான', hint: 'Crystal clear' },
-  { word: 'Frugal', meaning: 'Economical; careful with money', tamil: 'சிக்கனமான', hint: 'Saves money wisely' },
-  { word: 'Benevolent', meaning: 'Kind and generous to others', tamil: 'கருணையுள்ள', hint: 'Generous and kind' },
-];
-
-const speak = (text) => {
-  if ('speechSynthesis' in window) {
-    window.speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'en-US'; u.rate = 0.85;
-    window.speechSynthesis.speak(u);
-  }
-};
+import { wordBank } from '../data/vocabulary';
+import { useSpeech } from '../hooks/useSpeech';
 
 // ─── GAME 1: WORD MATCH ───────────────────────────────────────────────────────
 
 const WordMatch = ({ onExit }) => {
   const { addXp } = useAppContext();
+  const { speak } = useSpeech();
   const PAIRS = 6;
   const pool = useMemo(() => [...wordBank].sort(() => Math.random() - 0.5).slice(0, PAIRS), []);
 
@@ -149,6 +118,7 @@ const WordMatch = ({ onExit }) => {
 
 const Hangman = ({ onExit }) => {
   const { addXp } = useAppContext();
+  const { speak } = useSpeech();
   const [wordIndex, setWordIndex] = useState(() => Math.floor(Math.random() * wordBank.length));
   const [guessed, setGuessed] = useState(new Set());
   const [wrong, setWrong] = useState(0);
@@ -269,6 +239,7 @@ const Hangman = ({ onExit }) => {
 
 const FlashcardBlitz = ({ onExit }) => {
   const { addXp } = useAppContext();
+  const { speak } = useSpeech();
   const [cardIndex, setCardIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [score, setScore] = useState({ knew: 0, learn: 0 });
@@ -406,6 +377,7 @@ const FlashcardBlitz = ({ onExit }) => {
 
 const SpellingBee = ({ onExit }) => {
   const { addXp } = useAppContext();
+  const { speak } = useSpeech();
   const [qIndex, setQIndex] = useState(0);
   const [input, setInput] = useState('');
   const [submitted, setSubmitted] = useState(false);

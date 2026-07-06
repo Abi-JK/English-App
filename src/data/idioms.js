@@ -1,0 +1,18 @@
+export const idioms = [
+  { phrase: 'Hit the ground running', meaning: 'To begin a job or project with great energy and effort', use: 'He hit the ground running on his first day at the MNC.' },
+  { phrase: 'Touch base', meaning: 'To briefly contact someone or check in with them', use: 'Let\'s touch base tomorrow to discuss the project.' },
+  { phrase: 'Think outside the box', meaning: 'To think creatively or unconventionally', use: 'The manager asked us to think outside the box for new solutions.' },
+  { phrase: 'Get the ball rolling', meaning: 'To start something, especially something big', use: 'Let\'s get the ball rolling on the new campaign.' },
+  { phrase: 'Keep me in the loop', meaning: 'To keep someone informed about developments', use: 'Please keep me in the loop regarding the project status.' },
+  { phrase: 'Bite the bullet', meaning: 'To face a difficult situation bravely', use: 'I decided to bite the bullet and give the presentation.' },
+  { phrase: 'Cutting corners', meaning: 'Doing something poorly to save time or money', use: 'We should never cut corners on quality testing.' },
+  { phrase: 'Call it a day', meaning: 'To stop working for the day', use: 'We have done enough for today, let\'s call it a day.' },
+  { phrase: 'On the same page', meaning: 'To have a shared understanding or agreement', use: 'Let\'s have a meeting to ensure we are all on the same page.' },
+  { phrase: 'Go the extra mile', meaning: 'To make more effort than expected', use: 'She always goes the extra mile to help her team members.' },
+  { phrase: 'Ballpark figure', meaning: 'A rough estimate or approximate number', use: 'Can you give me a ballpark figure for the project cost?' },
+  { phrase: 'Take it easy', meaning: 'To relax and not worry too much', use: 'You have been working hard, take it easy this weekend.' },
+  { phrase: 'Under the weather', meaning: 'Feeling ill or unwell', use: 'I am feeling a bit under the weather today.' },
+  { phrase: 'Once in a blue moon', meaning: 'Something that happens very rarely', use: 'He visits his hometown once in a blue moon.' },
+  { phrase: 'Piece of cake', meaning: 'Something very easy to do', use: 'The exam was a piece of cake for her.' },
+  { phrase: 'Break the ice', meaning: 'To start a conversation in a social situation', use: 'She told a joke to break the ice at the meeting.' },
+];
