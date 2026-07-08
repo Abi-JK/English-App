@@ -114,6 +114,41 @@ export const questionSets = {
         options: ['very fluently well', 'very well fluently', 'very fluently', 'fluently very well'],
         answer: 2,
         explanation: 'Adverb "fluently" can be modified by "very". "Very fluently" is correct. (தமிழ்: "fluently" என்பது வினையுரிச்சொல், "very" கொண்டு மாற்றலாம்.)'
+      },
+      {
+        id: 't16', topic: 'Homophones',
+        question: 'Choose the correct word: "The principal gave a very inspiring ______ during the morning assembly."',
+        options: ['lesson (பாடம்)', 'lessen (குறைத்தல்)', 'listen (கேட்டல்)', 'leasing (குத்தகை)'],
+        answer: 0,
+        explanation: '"Lesson" is a teaching session. "Lessen" means to reduce. They are homophones - words that sound the same but have different meanings. (தமிழ்: "Lesson" பாடம், "Lessen" குறைத்தல். இவை ஒலியில் ஒன்றுபோல் இருந்தாலும் பொருளில் வேறுபட்டவை.)'
+      },
+      {
+        id: 't17', topic: 'Degrees of Comparison',
+        question: 'Fill in the blank: "Mount Everest is ______ peak in the world."',
+        options: ['higher', 'highest', 'the highest', 'more high'],
+        answer: 2,
+        explanation: 'Superlative degree needs "the" before it. Correct: "the highest". (தமிழ்: மேல் நிலை ஒப்பீட்டில் "the" கண்டிப்பாக வர வேண்டும்.)'
+      },
+      {
+        id: 't18', topic: 'Gerund / Infinitive',
+        question: 'Choose the correct form: "She is looking forward to ______ from the university."',
+        options: ['graduate', 'graduating', 'graduated', 'graduation'],
+        answer: 1,
+        explanation: 'After "look forward to", the preposition "to" is followed by a gerund (V+ing). (தமிழ்: "look forward to" இல் "to" ஒரு preposition, ஆகவே அதற்கு அடுத்து Gerund (V+ing) வரும்.)'
+      },
+      {
+        id: 't19', topic: 'Conditional Sentence',
+        question: 'Complete the sentence: "If she had studied harder, she ______ the exam."',
+        options: ['would pass', 'would have passed', 'will pass', 'passed'],
+        answer: 1,
+        explanation: 'Type 3 conditional: If + Past Perfect → would have + V3. (தமிழ்: வகை 3 நிபந்தனை: "If + had V3" வந்தால் "would have + V3" வரும்.)'
+      },
+      {
+        id: 't20', topic: 'Idiom',
+        question: 'What is the meaning of the idiom "To burn the midnight oil"?',
+        options: ['To waste fuel unnecessarily', 'To work or study late into the night', 'To get angry quickly', 'To cook food late at night'],
+        answer: 1,
+        explanation: '"Burn the midnight oil" = working late at night. (தமிழ்: இரவு நேரத்தில் தாமதமாக வேலை செய்வது அல்லது படிப்பது.)'
       }
     ]
   },
@@ -221,6 +256,41 @@ export const questionSets = {
         ],
         answer: 0,
         explanation: 'Adjective order: Opinion (beautiful) → Color (red) → Material (silk) → Origin (Indian). (தமிழ்: கருத்து → நிறம் → பொருள் → தோற்றம்.)'
+      },
+      {
+        id: 's13', topic: 'Error Detection',
+        question: 'Spot the error: "The scenery of this place are very beautiful and attracts many tourists every year."',
+        options: ['The scenery of this place', 'are very beautiful', 'attracts many tourists', 'No error'],
+        answer: 1,
+        explanation: '"Scenery" is an uncountable noun and is always singular. Correct: "The scenery... IS very beautiful". (தமிழ்: "Scenery" என்பது எண்ண முடியாத பெயர்ச்சொல். "are" தவறு, "is" வர வேண்டும்.)'
+      },
+      {
+        id: 's14', topic: 'Phrase Substitution',
+        question: 'Replace with correct phrase: "He was confused among the two options because both seemed equally good."',
+        options: ['between the two', 'among the both', 'in the two', 'within the two'],
+        answer: 0,
+        explanation: '"Between" is used for two things. "Among" is used for three or more. (தமிழ்: "Between" இரண்டிற்கு மட்டும். "Among" மூன்று அல்லது அதற்கு மேல்.)'
+      },
+      {
+        id: 's15', topic: 'Tense',
+        question: 'Fill in: "The train ______ before we reached the station."',
+        options: ['left', 'had left', 'has left', 'was leaving'],
+        answer: 1,
+        explanation: 'When one past action occurs before another past action, use Past Perfect for the earlier one. (தமிழ்: இரண்டு இறந்தகால நிகழ்வுகளில் முதலில் நடந்ததற்கு Past Perfect "had left".)'
+      },
+      {
+        id: 's16', topic: 'Subject-Verb Agreement',
+        question: 'Choose the correct verb: "The news ______ not good today from the financial markets."',
+        options: ['is', 'are', 'were', 'have been'],
+        answer: 0,
+        explanation: '"News" looks plural but is uncountable and takes a singular verb. (தமிழ்: "News" பன்மை போல் தோன்றினாலும் எண்ண முடியாதது. ஒருமை வினை "is" எடுக்கும்.)'
+      },
+      {
+        id: 's17', topic: 'Figure of Speech',
+        question: 'Identify the figure of speech: "The wind whispered through the trees."',
+        options: ['Simile', 'Metaphor', 'Personification', 'Alliteration'],
+        answer: 2,
+        explanation: 'Personification gives human qualities (whispering) to non-human things (wind). (தமிழ்: மனிதப் பண்புகளை மனிதர் அல்லாதவற்றுக்கு கொடுப்பது Personification.)'
       }
     ]
   },
@@ -290,6 +360,34 @@ export const questionSets = {
         options: ['Aggravate (மோசமாக்கு)', 'Alleviate (குறைத்தல்)', 'Eliminate (முற்றிலும் அகற்று)', 'Ignore (புறக்கணி)'],
         answer: 1,
         explanation: '"Mitigate" means to make less severe. "Alleviate" has the same meaning. (தமிழ்: "Mitigate" கடுமையைக் குறைத்தல். "Alleviate" இணை.)'
+      },
+      {
+        id: 'b9', topic: 'Fill in the Blank',
+        question: 'The new policy will come ______ effect from the next financial year beginning April 1st.',
+        options: ['in', 'into', 'to', 'on'],
+        answer: 1,
+        explanation: '"Come into effect" is an idiomatic expression meaning to start operating. (தமிழ்: "Come into effect" ஒரு சொற்றொடர், அதாவது செயல்படத் தொடங்குதல்.)'
+      },
+      {
+        id: 'b10', topic: 'Error Detection',
+        question: 'Spot the error: "One of the most important criteria for the loan approval is your credit score."',
+        options: ['One of the most', 'important criteria', 'is your credit score', 'No error'],
+        answer: 1,
+        explanation: '"Criteria" is plural. "One of the... criteria" should use plural noun but singular verb. Correct as given. (தமிழ்: "Criteria" பன்மை. "One of the" வந்தால் பன்மை பெயர்ச்சொல் + ஒருமை வினை சரியே.)'
+      },
+      {
+        id: 'b11', topic: 'Idiom',
+        question: 'What is the meaning of "To play devil\'s advocate"?',
+        options: ['To support someone blindly', 'To argue against an idea for discussion', 'To cheat in a game', 'To take revenge on someone'],
+        answer: 1,
+        explanation: '"Play devil\'s advocate" means to present opposing arguments to stimulate discussion. (தமிழ்: விவாதத்தை தூண்டுவதற்காக எதிர் கருத்தை முன்வைத்தல்.)'
+      },
+      {
+        id: 'b12', topic: 'Reading Comprehension',
+        question: 'Choose the correct meaning: "The word \'burgeoning\' in the passage most nearly means:"',
+        options: ['Declining (சரிவு)', 'Rapidly growing (வேகமாக வளரும்)', 'Stable (நிலையான)', 'Difficult (கடினமான)'],
+        answer: 1,
+        explanation: '"Burgeoning" means growing or expanding quickly, often used in economic contexts. (தமிழ்: "Burgeoning" வேகமாக வளரும்/விரிவடையும்.)'
       }
     ]
   }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
-import { LayoutDashboard, BookOpen, UserCheck, MessageSquare, X, Brain, FileText, PenSquare, Layers, Gamepad2, Mic, Headphones, BookMarked } from 'lucide-react';
+import { LayoutDashboard, BookOpen, UserCheck, MessageSquare, X, Brain, FileText, PenSquare, Layers, Gamepad2, Mic, Headphones, BookMarked, MessageCircle } from 'lucide-react';
 import { useAppContext } from './context/AppContext';
 import Navbar from './components/Navbar';
 
@@ -16,6 +16,7 @@ import VocabGames from './components/VocabGames';
 import ListeningLab from './components/ListeningLab';
 import ReadingLab from './components/ReadingLab';
 import Bookmarks from './components/Bookmarks';
+import ReplyChallenge from './components/ReplyChallenge';
 
 const App = () => {
   const { state } = useAppContext();
@@ -75,6 +76,9 @@ const App = () => {
             <NavLink to="/phrasal" onClick={closeMobileMenu} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
               <Layers size={20} /> Phrasal Verbs
             </NavLink>
+            <NavLink to="/reply" onClick={closeMobileMenu} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+              <MessageCircle size={20} /> Reply Challenge
+            </NavLink>
             <NavLink to="/listening" onClick={closeMobileMenu} className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
               <Headphones size={20} /> Listening Lab
             </NavLink>
@@ -122,6 +126,7 @@ const App = () => {
               <Route path="/writing" element={<WritingLab />} />
               <Route path="/phrasal" element={<PhrasalVerbs />} />
               <Route path="/games" element={<VocabGames />} />
+              <Route path="/reply" element={<ReplyChallenge />} />
               <Route path="/listening" element={<ListeningLab />} />
               <Route path="/reading" element={<ReadingLab />} />
               <Route path="/bookmarks" element={<Bookmarks />} />

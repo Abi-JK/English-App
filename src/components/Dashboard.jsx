@@ -6,7 +6,7 @@ import { useAppContext } from '../context/AppContext';
 import { boosterQuestions, getTodayBooster } from '../data/achievements';
 
 const Dashboard = () => {
-    const { state, updateUserProfile, claimDailyBooster } = useAppContext();
+    const { state, updateUserProfile, claimDailyBooster, updateStreak } = useAppContext();
     const navigate = useNavigate();
 
     const [nameInput, setNameInput] = useState(state.user.name);
@@ -32,6 +32,8 @@ const Dashboard = () => {
             critique: false
         };
     });
+
+    useEffect(() => { updateStreak(); }, []);
 
     useEffect(() => {
         const today = new Date().toDateString();
